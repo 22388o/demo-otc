@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RGB20 Exchange</title>
+</head>
+<body>
+    <h1>RGB20 Asset Exchange</h1>
+
+    <h2>Trade BTC for RGB20 Tokens</h2>
+
+    <form id="tradeForm">
+        <label for="btcAmount">BTC Amount:</label>
+        <input type="number" id="btcAmount" step="0.0001" required>
+
+        <label for="rgb20Amount">RGB20 Amount:</label>
+        <input type="number" id="rgb20Amount" step="0.01" required>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <h2>Open Orders</h2>
+    <ul id="orderBook">
+        <!-- Here, you would dynamically populate the list of open orders from the exchange's back-end. -->
+        <li>Buy 0.1 BTC for 100 RGB20 Tokens</li>
+        <li>Sell 0.05 BTC for 50 RGB20 Tokens</li>
+        <!-- Add more orders here -->
+    </ul>
+
+    <h2>Trade History</h2>
+    <ul id="tradeHistory">
+        <!-- Here, you would dynamically populate the list of recent trades from the exchange's back-end. -->
+        <li>Traded 0.1 BTC for 100 RGB20 Tokens</li>
+        <li>Traded 0.05 BTC for 50 RGB20 Tokens</li>
+        <!-- Add more trade history here -->
+    </ul>
+</body>
+</html>
