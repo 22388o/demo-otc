@@ -1,7 +1,51 @@
+To add black and white colors to your HTML elements, you can use CSS. Here's how you can modify your HTML code to include black and white color styling using CSS:
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
     <title>Demo RGB20 Exchange- OTC</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        h1, h2 {
+            color: black;
+        }
+
+        form {
+            background-color: white;
+            color: black;
+        }
+
+        label {
+            color: black;
+        }
+
+        input {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <h1>RGB20 Asset Exchange (OTC)</h1>
@@ -33,5 +77,26 @@
         <li>Traded 0.05 BTC for 50 RGB20 Tokens</li>
         <!-- Add more trade history here -->
     </ul>
+     <script>
+        // JavaScript to handle form submission and order creation
+        document.getElementById("tradeForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            // Get the input values
+            const btcAmount = parseFloat(document.getElementById("btcAmount").value);
+            const rgb20Amount = parseFloat(document.getElementById("rgb20Amount").value);
+            
+            // You can add your order creation logic here
+            // For this example, we'll simply add the order to the Open Orders list
+            const orderText = `Buy ${btcAmount} BTC for ${rgb20Amount} RGB20 Tokens`;
+            const orderListItem = document.createElement("li");
+            orderListItem.textContent = orderText;
+            document.getElementById("orderBook").appendChild(orderListItem);
+            
+            // You may want to send this order data to your server or perform other actions.
+        });
+    </script>
 </body>
 </html>
+```
+
